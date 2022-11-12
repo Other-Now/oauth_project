@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-yw9a(!7x5e6lm3=zma2_0w1bitq1u9=(gbiau#$k9vql_*lb-t'
-SECRET_KEY = os.evviron.get("SECRET_KEY")
+SECRET_KEY = os.eviron.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
