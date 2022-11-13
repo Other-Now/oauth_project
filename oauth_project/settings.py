@@ -12,6 +12,12 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+# from dotenv import load_dotenv
+import environ
+
+env = environ.Env()
+
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,7 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-yw9a(!7x5e6lm3=zma2_0w1bitq1u9=(gbiau#$k9vql_*lb-t'
-SECRET_KEY = os.environ.get("SECRET_KEY")
+# SECRET_KEY = os.environ.get("SECRET_KEY")
+
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -140,6 +148,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 SITE_ID = 4
+
+# BASE_URL = 
 
 LOGIN_REDIRECT_URL = 'http://127.0.0.1:8000/api/employee/'
 LOGOUT_REDIRECT_URL = 'https://www.google.com/search?sxsrf=ALiCzsZE94J_Nx0D6kPk8gpLNWoR31chcA:1668278079265&q=success&spell=1&sa=X&ved=2ahUKEwjx-rOSpKn7AhUoqWMGHZ04C8IQBSgAegQIBhAB&biw=1536&bih=746&dpr=1.25'
