@@ -15,6 +15,9 @@ import os
 # from dotenv import load_dotenv
 import environ
 
+# if os.path.exists('env.py'):
+#         import env
+
 env = environ.Env()
 
 environ.Env.read_env()
