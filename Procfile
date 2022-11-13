@@ -1,1 +1,3 @@
-web: gunicorn oauthapi.wsgi
+web: gunicorn oauthapi.wsgi:application --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
