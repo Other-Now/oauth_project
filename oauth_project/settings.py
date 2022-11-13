@@ -36,9 +36,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1:8000','127.0.0.1']
 
 
 # Application definition
@@ -58,6 +59,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
+
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -110,18 +113,18 @@ DATABASES = {
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    # },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    # },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    # },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    # },
 ]
 
 
@@ -152,11 +155,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SITE_ID = 4
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 # BASE_URL = 
 
-LOGIN_REDIRECT_URL = 'http://127.0.0.1:8000/api/employee/'
-LOGOUT_REDIRECT_URL = 'https://www.google.com/search?sxsrf=ALiCzsZE94J_Nx0D6kPk8gpLNWoR31chcA:1668278079265&q=success&spell=1&sa=X&ved=2ahUKEwjx-rOSpKn7AhUoqWMGHZ04C8IQBSgAegQIBhAB&biw=1536&bih=746&dpr=1.25'
-
+LOGIN_REDIRECT_URL = 'home'
+# LOGOUT_REDIRECT_URL = 'https://www.google.com/search?sxsrf=ALiCzsZE94J_Nx0D6kPk8gpLNWoR31chcA:1668278079265&q=success&spell=1&sa=X&ved=2ahUKEwjx-rOSpKn7AhUoqWMGHZ04C8IQBSgAegQIBhAB&biw=1536&bih=746&dpr=1.25'
+ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
