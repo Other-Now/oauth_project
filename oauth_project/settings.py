@@ -160,6 +160,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # BASE_URL = 
 
 LOGIN_REDIRECT_URL = 'home'
+
+# LOGIN_REDIRECT_URL = ''
 # LOGOUT_REDIRECT_URL = 'https://www.google.com/search?sxsrf=ALiCzsZE94J_Nx0D6kPk8gpLNWoR31chcA:1668278079265&q=success&spell=1&sa=X&ved=2ahUKEwjx-rOSpKn7AhUoqWMGHZ04C8IQBSgAegQIBhAB&biw=1536&bih=746&dpr=1.25'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 

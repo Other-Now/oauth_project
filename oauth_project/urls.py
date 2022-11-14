@@ -25,8 +25,13 @@ urlpatterns = [
     # path('', TemplateView.as_view(template_name="index.html")),
     path('accounts/', include('allauth.urls')),
     path('api/',include(router.urls)),
-    # path('logout', LogoutView.as_view()),
+
+    # path('',include('/auth_app.urls')),
+
+    path('logout', LogoutView.as_view()),
 
     path('home/', TemplateView.as_view(template_name='dashboard/home.html'), name='home'),
-    path('accounts/', include('allauth.urls')),
+    # path('accounts/', include('allauth.urls')),
+
+    # path('', TemplateView.as_view(template_name='dashboard/home.html'), name='home'),
 ]
