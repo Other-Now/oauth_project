@@ -43,4 +43,4 @@ After downloading the zip file:
     python manage.py runserver
     
     
-    # Now, *To run this go to http://127.0.0.1:8000/accounts/login/ to see*.
+    # Now, **To run this go to http://127.0.0.1:8000/accounts/login/ to see**.
